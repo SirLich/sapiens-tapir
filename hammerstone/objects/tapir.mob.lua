@@ -37,7 +37,8 @@ return {
 				reactDistance = mj:mToP(50.0),
 				agroDistance = mj:mToP(5.0),
 				runDistance = mj:mToP(30.0),
-				
+				minSapienProximityDistanceForSpawning = mj:mToP(50.0),
+
 				agroTimerDuration = 5.0,
 				aggresionLevel = nil,
 		
@@ -48,6 +49,10 @@ return {
 				walkSpeed = mj:mToP(0.5),
 				
 				runSpeedMultiplier = 4.0,
+				rotationSpeedMultiplier = 1.5,
+				
+				infrequentUpdatePeriod = 4.0, --default of 5.0, but mobs that move quickly need to be updated more frequently. Must be called every 4.5 meters of movement to avoid pauses.
+
 				embedBoxHalfSize = vec3(0.3,0.2,0.5),
 				
 				maxSoundDistance2 = mj:mToP(200.0) * mj:mToP(200.0),
